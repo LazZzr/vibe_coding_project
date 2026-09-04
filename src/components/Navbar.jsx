@@ -1,10 +1,11 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState, useRef, useEffect } from 'react';
 import {
-  ShieldCheck, Search, Bell, Menu, X, ChevronDown,
+  Search, Bell, Menu, X, ChevronDown,
   Home, Info, Waves, Map, Users, Gauge, Move, BarChart3,
   BookOpen, LogIn,
 } from 'lucide-react';
+import Logo from '@/components/Logo';
 import { NOTIFICATIONS } from '@/data/demoData';
 
 const NAV_LINKS = [
@@ -101,7 +102,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 flex-shrink-0">
-            <ShieldCheck className="w-6 h-6 text-blue-700" />
+            <Logo className="w-7 h-7" variant="dark" />
             <div className="hidden sm:block">
               <span className="text-sm font-bold text-slate-800 leading-tight block">NDMA Sentinel-DSS</span>
               <span className="text-[10px] text-slate-400 leading-tight block">SIH 2026 Prototype</span>

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { ShieldCheck, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import Logo from '@/components/Logo';
 
 const NAV_LINKS = [
   { to: '/', label: 'Home' },
@@ -29,7 +30,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-3">
-              <ShieldCheck className="w-6 h-6 text-blue-400" />
+              <Logo className="w-7 h-7" variant="light" />
               <span className="text-sm font-bold text-white">NDMA Sentinel-DSS</span>
             </div>
             <p className="text-sm text-slate-400 leading-relaxed">

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ShieldCheck, LogIn, Info } from 'lucide-react';
+import { LogIn, Info } from 'lucide-react';
+import Logo from '@/components/Logo';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -19,8 +20,8 @@ export default function Login() {
       <div className="w-full max-w-md">
         <div className="bg-white rounded-lg border border-slate-200 shadow-sm p-8">
           <div className="text-center mb-6">
-            <div className="w-12 h-12 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center mx-auto mb-3">
-              <ShieldCheck className="w-6 h-6" />
+            <div className="w-14 h-14 flex items-center justify-center mx-auto mb-3">
+              <Logo className="w-12 h-12" variant="dark" />
             </div>
             <h1 className="text-xl font-bold text-slate-800">Login</h1>
             <p className="text-xs text-slate-500 mt-1">NDMA Sentinel-DSS</p>
