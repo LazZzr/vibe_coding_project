@@ -68,7 +68,7 @@ export default function Home() {
 
       {/* Map preview */}
       <section className="max-w-[1600px] mx-auto px-4 sm:px-6 py-12">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
           <div>
             <h2 className="text-xl font-bold text-slate-800">Risk Map Preview</h2>
             <p className="text-sm text-slate-500">Interactive GIS map with hazard risk markers — Demo Data</p>
@@ -77,7 +77,7 @@ export default function Home() {
             View Full Map <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
-        <MapView habitations={highRisk} height="450px" />
+        <MapView habitations={highRisk} height="450px" className="h-[300px] sm:h-[450px]" />
         <div className="mt-3 flex justify-center">
           <MapLegend />
         </div>
@@ -88,7 +88,7 @@ export default function Home() {
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6">
           <h2 className="text-xl font-bold text-slate-800 text-center mb-2">Core Workflow</h2>
           <p className="text-sm text-slate-500 text-center mb-8">From hazard detection to relocation prioritization</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-2 sm:gap-3">
             {[
               { icon: Users, label: 'Data Collection' },
               { icon: Workflow, label: 'Preprocessing' },
@@ -139,16 +139,16 @@ export default function Home() {
 
       {/* Relocation sites preview */}
       <section className="max-w-[1600px] mx-auto px-4 sm:px-6 pb-12">
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
           <div>
-            <h2 className="text-xl font-bold text-slate-800">Safe Relocation Sites</h2>
+            <h2 className="text-lg sm:text-xl font-bold text-slate-800">Safe Relocation Sites</h2>
             <p className="text-sm text-slate-500">Candidate sites with available capacity — Demo Data</p>
           </div>
           <Link to="/relocation-sites" className="text-sm font-medium text-blue-700 hover:text-blue-900 inline-flex items-center gap-1">
             Explore Safe Sites <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
-        <MapView habitations={highRisk.slice(0, 6)} relocationSites={RELOCATION_SITES} showSites height="400px" />
+        <MapView habitations={highRisk.slice(0, 6)} relocationSites={RELOCATION_SITES} showSites height="400px" className="h-[300px] sm:h-[400px]" />
       </section>
     </div>
   );

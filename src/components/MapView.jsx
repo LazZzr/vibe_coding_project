@@ -58,8 +58,11 @@ export default function MapView({
   showSites = false,
   className = '',
 }) {
+  const responsiveHeight = typeof height === 'string' && height.endsWith('px')
+    ? { minHeight: '300px', height }
+    : { height };
   return (
-    <div className={`relative rounded-lg overflow-hidden border border-slate-200 ${className}`} style={{ height }}>
+    <div className={`relative rounded-lg overflow-hidden border border-slate-200 ${className}`} style={responsiveHeight}>
       <MapContainer
         center={center}
         zoom={zoom}

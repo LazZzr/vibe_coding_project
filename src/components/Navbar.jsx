@@ -22,7 +22,7 @@ const NAV_LINKS = [
 
 function NotificationsDropdown({ onClose }) {
   return (
-    <div className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-slate-200 z-50">
+    <div className="absolute right-0 mt-2 w-[calc(100vw-2rem)] max-w-80 bg-white rounded-lg shadow-xl border border-slate-200 z-50">
       <div className="px-4 py-3 border-b border-slate-100">
         <p className="text-sm font-semibold text-slate-800">Notifications</p>
         <p className="text-xs text-slate-400">Prototype Notifications — Demo</p>
@@ -55,7 +55,7 @@ function SearchDropdown({ onClose }) {
   const [query, setQuery] = useState('');
 
   return (
-    <div className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-slate-200 z-50">
+    <div className="absolute right-0 mt-2 w-[calc(100vw-2rem)] max-w-80 bg-white rounded-lg shadow-xl border border-slate-200 z-50">
       <div className="p-3 border-b border-slate-100">
         <div className="relative">
           <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
@@ -131,7 +131,7 @@ export default function Navbar() {
             <div className="relative" ref={searchRef}>
               <button
                 onClick={() => { setSearchOpen(!searchOpen); setNotifOpen(false); }}
-                className="p-2 rounded-md text-slate-600 hover:bg-slate-100"
+                className="p-2.5 rounded-md text-slate-600 hover:bg-slate-100 touch-manipulation"
                 aria-label="Search"
               >
                 <Search className="w-4.5 h-4.5" style={{ width: 18, height: 18 }} />
@@ -142,7 +142,7 @@ export default function Navbar() {
             <div className="relative" ref={notifRef}>
               <button
                 onClick={() => { setNotifOpen(!notifOpen); setSearchOpen(false); }}
-                className="relative p-2 rounded-md text-slate-600 hover:bg-slate-100"
+                className="relative p-2.5 rounded-md text-slate-600 hover:bg-slate-100 touch-manipulation"
                 aria-label="Notifications"
               >
                 <Bell className="w-4.5 h-4.5" style={{ width: 18, height: 18 }} />
@@ -153,7 +153,7 @@ export default function Navbar() {
 
             <Link
               to="/login"
-              className="hidden sm:flex items-center gap-1.5 ml-2 px-3 py-1.5 text-xs font-medium text-white bg-blue-700 hover:bg-blue-800 rounded-md transition-colors"
+              className="hidden sm:flex items-center gap-1.5 ml-2 px-3.5 py-2 text-xs font-medium text-white bg-blue-700 hover:bg-blue-800 rounded-md transition-colors touch-manipulation"
             >
               <LogIn className="w-3.5 h-3.5" />
               Login
@@ -161,7 +161,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 rounded-md text-slate-600 hover:bg-slate-100"
+              className="lg:hidden p-2.5 rounded-md text-slate-600 hover:bg-slate-100 touch-manipulation"
               aria-label="Menu"
             >
               {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
